@@ -10,6 +10,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
+    background-color: #F9F9F9;
 }
 
 *,
