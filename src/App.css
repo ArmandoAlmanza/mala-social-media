@@ -18,3 +18,76 @@ html {
     box-sizing: inherit;
     margin: 0;
 }
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.site__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.3rem;
+}
+
+.logo {
+    font-size: 3rem;
+}
+
+.logo span {
+    color: aquamarine;
+}
+
+@media (min-width: 768px) {
+  .site__header{
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+  }
+}
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.navbar a {
+  font-size: 1.6rem;
+  transition: all .3s ease-in-out;
+}
+
+.navbar a:hover{
+  transform: scale(1.1);
+}
+
+/* Header Avatar */
+
+.profile__header{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #000;
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.avatar__header {
+  height: 3.6rem;
+}
+
+.profile__header p {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .profile__header{
+
+  }
+}
