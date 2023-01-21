@@ -11,7 +11,7 @@ const Header = () => {
 		<Navbar />
 		<div className='profile__header'>
 			<img className='avatar__header' src={avatar} alt="Avatar picture" />
-			<p>Arandano Depresivo</p>
+			<h1>Arandano Depresivo</h1>
 		</div>
 	</header>
   )

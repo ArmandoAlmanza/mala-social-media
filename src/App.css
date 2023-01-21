@@ -45,6 +45,7 @@ a {
     flex-direction: row;
     justify-content: space-evenly;
     gap: 0;
+    align-items: flex-end;
   }
 }
 
@@ -70,15 +71,19 @@ a {
 
 .profile__header{
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
-  border: 1px solid #000;
-  padding: 1rem;
-  border-radius: 15px;
+  transition: all .3s ease-in-out;
+}
+
+.profile__header:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .avatar__header {
   height: 3.6rem;
+  border-radius: 50%;
 }
 
 .profile__header p {
@@ -87,7 +92,7 @@ a {
 }
 
 @media (min-width: 768px) {
-  .profile__header{
-
+  .avatar__header{
+    height: 4.2rem;
   }
 }
