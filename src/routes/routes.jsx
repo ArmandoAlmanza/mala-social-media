@@ -7,6 +7,7 @@ export const MyRoutes = () => {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App />} />
+                <Route path="/home" element={<App />} />
                 <Route path="/profile" element={<Profile />} />
             </Routes>
         </BrowserRouter>

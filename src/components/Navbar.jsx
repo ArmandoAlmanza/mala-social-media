@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const links = ["profile", "posts", "friends", "trending"];
+    const links = ["home", "profile", "posts", "friends", "trending"];
 
     return (
         <nav className="navbar">
-            <Link to={"/"} className="link">
-                Home
+            <Link to={"/profile?name=Armando Almanza"} className="link">
+                Profile Armando
             </Link>
             {links.map((anchor, i) => {
                 return (
