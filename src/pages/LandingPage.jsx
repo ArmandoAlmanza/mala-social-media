@@ -9,7 +9,7 @@ const LandingPage = () => {
     return (
         <div>
             <Header />
-            <h1>Welcome to MALA</h1>
+            <h1 className="title">Welcome to MALA</h1>
         </div>
     );
 };
