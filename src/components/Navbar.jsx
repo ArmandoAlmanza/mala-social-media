@@ -12,7 +12,7 @@ const Navbar = () => {
         },
 
         {
-            to: "/post",
+            to: "/posts",
             name: "Post",
         },
 
