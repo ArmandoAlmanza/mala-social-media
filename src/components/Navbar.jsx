@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 
 const Navbar = () => {
     const links = [
@@ -25,12 +25,8 @@ const Navbar = () => {
             name: "Trending",
         },
     ];
-
     return (
         <nav className="navbar">
-            <Link to={"/profile?name=Armando Almanza"} className="link">
-                Profile Armando
-            </Link>
             {links.map((anchor, i) => {
                 return (
                     <Link to={anchor.to} className="link" key={i}>

@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
 import Header from "../components/Header";
-import { useLocation } from "react-router-dom";
-
-function useQuery() {
-    const { search } = useLocation();
-
-    return React.useMemo(() => new URLSearchParams(search), [search]);
-}
+import { useSearchParams } from "react-router-dom";
 
 const Profile = () => {
-    let query = useQuery();
+    let name = "";
+    let apellido = ";";
+
     useEffect(() => {
         document.title = "MALA || Profile";
     }, []);
@@ -17,7 +13,7 @@ const Profile = () => {
     return (
         <div>
             <Header />
-            <h1>Welcome to {query.get("name")} profile</h1>
+            <h1>Welcome toprofile</h1>
         </div>
     );
 };
