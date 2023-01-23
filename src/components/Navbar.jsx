@@ -1,7 +1,30 @@
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    const links = ["home", "profile", "posts", "friends", "trending"];
+    const links = [
+        {
+            to: "/",
+            name: "Home",
+        },
+        {
+            to: "/profile",
+            name: "Profile",
+        },
+
+        {
+            to: "/post",
+            name: "Post",
+        },
+
+        {
+            to: "/",
+            name: "Friends",
+        },
+        {
+            to: "/",
+            name: "Trending",
+        },
+    ];
 
     return (
         <nav className="navbar">
@@ -10,8 +33,8 @@ const Navbar = () => {
             </Link>
             {links.map((anchor, i) => {
                 return (
-                    <Link to={"/" + anchor} className="link" key={i}>
-                        {anchor.charAt(0).toUpperCase() + anchor.slice(1)}
+                    <Link to={anchor.to} className="link" key={i}>
+                        {anchor.name}
                     </Link>
                 );
             })}

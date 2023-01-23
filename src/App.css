@@ -10,7 +10,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
 }
 
 *,
@@ -24,12 +24,11 @@ a {
     text-decoration: none;
 }
 /* Utils */
-.title{
-  font-size: 2.5rem;
-  margin: 2rem 0;
-  text-align: center;
+.title {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    text-align: center;
 }
-
 
 /* Header */
 .site__header {
@@ -49,12 +48,12 @@ a {
 }
 
 @media (min-width: 768px) {
-  .site__header{
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 0;
-    align-items: flex-end;
-  }
+    .site__header {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 0;
+        align-items: flex-end;
+    }
 }
 
 /* Navbar */
@@ -67,40 +66,67 @@ a {
 }
 
 .navbar a {
-  font-size: 1.6rem;
-  transition: all .3s ease-in-out;
+    font-size: 1.6rem;
+    transition: all 0.3s ease-in-out;
 }
 
-.navbar a:hover{
-  transform: scale(1.1);
+.navbar a:hover {
+    transform: scale(1.1);
 }
 
 /* Header Avatar */
 
-.profile__header{
-  display: flex;
-  align-items: flex-end;
-  gap: 1rem;
-  transition: all .3s ease-in-out;
+.profile__header {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+    transition: all 0.3s ease-in-out;
 }
 
-.profile__header:hover{
+.profile__header:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
 
 .avatar__header {
-  height: 3.6rem;
-  border-radius: 50%;
+    height: 3.6rem;
+    border-radius: 50%;
 }
 
 .profile__header p {
-  font-size: 1.5rem;
-  text-transform: uppercase;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-  .avatar__header{
-    height: 4.2rem;
-  }
+    .avatar__header {
+        height: 4.2rem;
+    }
+}
+
+/* Posts */
+.post__container {
+    display: grid;
+    justify-content: center;
+    align-content: flex-start;
+    padding: 4rem;
+}
+
+.post__container h1 {
+    font-size: 3rem;
+}
+
+.post {
+    max-width: 50rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #000;
+}
+
+.post p {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.post:last-child {
+    border: none;
 }
