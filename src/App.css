@@ -130,3 +130,24 @@ a {
 .post:last-child {
     border: none;
 }
+
+.post__info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.post__info p {
+    font-size: 1.4rem;
+}
+
+.post__info img {
+    max-height: 3.6rem;
+}
+
+.post__info small{
+    font-size: 1.2rem;
+    font-weight: bold;
+}

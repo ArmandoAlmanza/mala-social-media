@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./Header";
+import avatar from "../assets/avatar.svg";
 
 const getData = async () => {
     return await fetch("https://jsonplaceholder.typicode.com/posts/").then(
@@ -14,6 +15,17 @@ const Posts = () => {
             setPosts(data);
         });
     }, []);
+
+    const names = [
+        "Armando Almanza",
+        "Mariana Alejandra",
+        "Sergio Cholula",
+        "Ivan Espiritu Santo",
+        "Bernardo Sanchez",
+    ];
+    const date = new Date();
+    const today =
+        date.getDay() + " - " + date.getMonth() + " - " + date.getFullYear();
     return (
         <div>
             <Header />
@@ -22,6 +34,18 @@ const Posts = () => {
                     <div key={i} className="post">
                         <h1>{post.title}</h1>
                         <p>{post.body}</p>
+                        <article className="post__info">
+                            <img src={avatar} alt="avatar image" />
+                            <p>
+                                Writen by{" "}
+                                {
+                                    names[
+                                        Math.floor(Math.random() * names.length)
+                                    ]
+                                }{" "}
+                            </p>
+                            <small>Written date {today}</small>
+                        </article>
                     </div>
                 ))}
             </div>
