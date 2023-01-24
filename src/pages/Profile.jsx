@@ -12,7 +12,6 @@ const Profile = () => {
 
     return (
         <div>
-            <Header />
             <h1>Welcome toprofile</h1>
         </div>
     );

@@ -25,10 +25,13 @@ const Posts = () => {
     ];
     const date = new Date();
     const today =
-        date.getDay() + " - " + date.getMonth() + " - " + date.getFullYear();
+        date.getDay() +
+        " - " +
+        (date.getMonth() + 1) +
+        " - " +
+        date.getFullYear();
     return (
         <div>
-            <Header />
             <div className="post__container">
                 {posts.slice(0, 20).map((post, i) => (
                     <div key={i} className="post">
