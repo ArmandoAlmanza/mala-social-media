@@ -1,6 +1,5 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaGithub } from "react-icons/fa";
-import Socials from "./Socials";
 
 const Footer = () => {
     return (
@@ -16,14 +15,14 @@ const Footer = () => {
                         <FaFacebook />
                     </a>
                     <a
-                        href={"https://www.facebook.com/ArmyAlmanza/"}
+                        href={"https://www.instagram.com/jamon_sad/"}
                         target="_blank"
                     >
                         {" "}
                         <FaInstagram />
                     </a>
                     <a
-                        href={"https://www.facebook.com/ArmyAlmanza/"}
+                        href={"https://github.com/ArmandoAlmanza"}
                         target="_blank"
                     >
                         {" "}
@@ -46,14 +45,14 @@ const Footer = () => {
                         <FaFacebook />
                     </a>
                     <a
-                        href={"https://www.facebook.com/ana.mercado.716"}
+                        href={"https://www.instagram.com/mary30_aguilar/"}
                         target="_blank"
                     >
                         {" "}
                         <FaInstagram />
                     </a>
                     <a
-                        href={"https://www.facebook.com/ana.mercado.716"}
+                        href={"https://github.com/MaryAguilar30"}
                         target="_blank"
                     >
                         {" "}
