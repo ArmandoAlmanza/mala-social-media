@@ -8,11 +8,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lombok.AllArgsConstructor;
+
 @RestController
+@AllArgsConstructor
 @RequestMapping("/api/user")
 public class UserController {
 	
-	private UserRepository userRepository;
+	private final UserRepository userRepository;
 	record newUserRequest (String name, String email, String password, String imagePath){}
 
 	@GetMapping
