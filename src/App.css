@@ -32,7 +32,7 @@ a {
 
 /* Buttons */
 
-.btn{
+.btn {
     background: transparent;
     border: none;
 }
@@ -40,7 +40,6 @@ a {
 .btn:hover {
     cursor: pointer;
 }
-
 
 /* Header */
 .site__header {
@@ -159,14 +158,13 @@ a {
     max-height: 3.6rem;
 }
 
-.post__info small{
+.post__info small {
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-
 /* Footer */
-.site__footer{
+.site__footer {
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
@@ -177,7 +175,7 @@ a {
 }
 
 @media (min-width: 768px) {
-    .site__footer{
+    .site__footer {
         flex-direction: row;
     }
 }
@@ -194,7 +192,7 @@ a {
     font-weight: bold;
 }
 
-.socials{
+.socials {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -209,4 +207,45 @@ a {
 
 .diclaimer {
     max-width: 50rem;
+}
+
+/* Profile */
+
+.profile__container {
+    display: grid;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .profile__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile__posts {
+    max-height: 100vh;
+    margin: 1rem auto;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+.profile__posts::-webkit-scrollbar {
+    display: none;
+}
+
+
+.profile__data {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5rem;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+.profile__data span {
+    font-size: 2rem;
 }
