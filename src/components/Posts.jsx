@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "./Header";
 import avatar from "../assets/avatar.svg";
 
 const getData = async () => {
