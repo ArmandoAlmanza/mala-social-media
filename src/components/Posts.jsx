@@ -23,13 +23,7 @@ const Posts = () => {
         "Ivan Espiritu Santo",
         "Bernardo Sanchez",
     ];
-    const date = new Date();
-    const today =
-        date.getDay() +
-        " - " +
-        (date.getMonth() + 1) +
-        " - " +
-        date.getFullYear();
+
     return (
         <div>
             <div className="post__container">
@@ -47,12 +41,26 @@ const Posts = () => {
                                     ]
                                 }{" "}
                             </p>
-                            <small>Written date {today}</small>
+                            <LikeButton id={i} />
                         </article>
                     </div>
                 ))}
             </div>
         </div>
+    );
+};
+
+const LikeButton = ({ id }) => {
+    const [like, setLike] = useState(false);
+    return (
+        <button
+            className="btn"
+            onClick={() => {
+                setLike(!like);
+            }}
+        >
+            {like ? "❤" : "🤍"}
+        </button>
     );
 };
 

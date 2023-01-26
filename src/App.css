@@ -30,6 +30,18 @@ a {
     text-align: center;
 }
 
+/* Buttons */
+
+.btn{
+    background: transparent;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
 /* Header */
 .site__header {
     display: flex;
