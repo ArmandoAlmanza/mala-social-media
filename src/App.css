@@ -1,16 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;600&display=swap');
 :root {
     /* Variables */
-    --primary-color: #000;
+    --primary-color: #D7E9F7;
+    --main-font: 'Montserrat', sans-serif;
+    --logo-font: 'Dancing Script', cursive;
 }
 
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
-    background-color: #f9f9f9;
+    font-family: var(--main-font);
+    background-color: #FFF9F9;
 }
 
 *,
@@ -41,6 +42,18 @@ a {
     cursor: pointer;
 }
 
+.btn__login {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    border: 1px solid #000;
+    text-align: center;
+    transition: all .3s ease-in-out;
+}
+
+.btn__login:hover{
+    background-color: var(--primary-color);
+}
+
 /* Header */
 .site__header {
     display: flex;
@@ -52,10 +65,11 @@ a {
 
 .logo {
     font-size: 3rem;
+    font-family: var(--logo-font);
 }
 
 .logo span {
-    color: aquamarine;
+    color: var(--primary-color);
 }
 
 @media (min-width: 768px) {
@@ -167,7 +181,7 @@ a {
 .site__footer {
     display: flex;
     flex-direction: column;
-    background-color: aliceblue;
+    background-color: var(--primary-color);
     align-items: center;
     justify-content: space-evenly;
     padding: 2rem;
@@ -248,4 +262,53 @@ a {
 }
 .profile__data span {
     font-size: 2rem;
+}
+
+/* Login form */
+
+.login__container{
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #F4EEFF;
+    margin: 3rem auto;
+}
+
+@media (min-width: 768px) {
+    .login__container{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: auto;
+        height: 100vh;
+        align-items: center;
+    }
+}
+
+.login__img img {
+    height: 40rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .login__img img {
+        height: 90rem;
+    }
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.field label {
+    font-size: 1.4rem;
+}
+.field input {
+    width: 95%;
 }
