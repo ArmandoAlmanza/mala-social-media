@@ -7,6 +7,8 @@ import {
 } from "react-icons/fa";
 import Posts from "../components/Posts";
 import avatar from "../assets/avatar.svg";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const Profile = () => {
     useEffect(() => {
@@ -21,45 +23,49 @@ const Profile = () => {
     };
 
     return (
-        <div className="profile__container">
-            <div className="profile__info">
-                <h1 className="title">Armando Almanza Profile</h1>
-                <img src={avatar} alt="avatar image" />
-                <div className="profile__data__container">
-                    <p className="profile__data">
-                        <span>
-                            <FaUser />
-                        </span>
-                        {profile.name}
-                    </p>
+        <>
+            <Header />
+            <div className="profile__container">
+                <div className="profile__info">
+                    <h1 className="title">Armando Almanza Profile</h1>
+                    <img src={avatar} alt="avatar image" />
+                    <div className="profile__data__container">
+                        <p className="profile__data">
+                            <span>
+                                <FaUser />
+                            </span>
+                            {profile.name}
+                        </p>
 
-                    <p className="profile__data">
-                        <span>
-                            {" "}
-                            <FaBirthdayCake />
-                        </span>
-                        {profile.birthday}
-                    </p>
+                        <p className="profile__data">
+                            <span>
+                                {" "}
+                                <FaBirthdayCake />
+                            </span>
+                            {profile.birthday}
+                        </p>
 
-                    <p className="profile__data">
-                        <span>
-                            <FaMapMarker />
-                        </span>
-                        {profile.location}
-                    </p>
+                        <p className="profile__data">
+                            <span>
+                                <FaMapMarker />
+                            </span>
+                            {profile.location}
+                        </p>
 
-                    <p className="profile__data">
-                        <span>
-                            <FaRegComment />
-                        </span>
-                        {profile.phrase}
-                    </p>
+                        <p className="profile__data">
+                            <span>
+                                <FaRegComment />
+                            </span>
+                            {profile.phrase}
+                        </p>
+                    </div>
+                </div>
+                <div className="profile__posts">
+                    <Posts />
                 </div>
             </div>
-            <div className="profile__posts">
-                <Posts />
-            </div>
-        </div>
+            <Footer />
+        </>
     );
 };
 

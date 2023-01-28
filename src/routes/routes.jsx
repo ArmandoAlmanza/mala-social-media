@@ -8,14 +8,11 @@ import Footer from "../components/Footer";
 export const MyRoutes = () => {
     return (
         <BrowserRouter>
-            <Header />
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="/home" element={<App />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/posts" element={<Posts />} />
             </Routes>
-            <Footer />
         </BrowserRouter>
     );
 };

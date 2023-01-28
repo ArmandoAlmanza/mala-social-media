@@ -2,10 +2,7 @@ import { Link, useSearchParams } from "react-router-dom";
 
 const Navbar = () => {
     const links = [
-        {
-            to: "/",
-            name: "Home",
-        },
+
         {
             to: "/profile",
             name: "Profile",
