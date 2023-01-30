@@ -160,6 +160,7 @@ a {
 }
 
 /* Posts */
+
 .post__container {
     display: grid;
     justify-content: center;
@@ -167,9 +168,18 @@ a {
     padding: 1rem 3rem;
 }
 
+.single__post {
+    height: 42.5vh;
+    padding: 4rem;
+}
+
 @media (min-width: 768px) {
     .post__container {
         height: 74rem;
+    }
+    .single__post {
+        max-height: 72vh;
+        margin: 3rem auto;
     }
 }
 
