@@ -167,8 +167,10 @@ a {
     padding: 4rem;
 }
 
-.post__container h1 {
+.post__container a {
     font-size: 3rem;
+    color: #000;
+    font-weight: bold;
 }
 
 .post {
@@ -176,6 +178,7 @@ a {
     margin-bottom: 2rem;
     border-bottom: 1px solid #000;
 }
+
 
 .post p {
     font-size: 2rem;

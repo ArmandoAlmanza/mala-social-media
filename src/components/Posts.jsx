@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Loader from "./Loader";
 import avatar from "../assets/avatar.svg";
+import { Link } from "react-router-dom";
+import LikeButton from "./LikeButton";
 
 const getData = async () => {
     return await fetch("https://jsonplaceholder.typicode.com/posts/").then(
@@ -10,15 +11,10 @@ const getData = async () => {
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(false);
     useEffect(() => {
-        setLoading(true);
-        setTimeout(() => {
-            getData().then((data) => {
-                setPosts(data);
-                setLoading(false);
-            });
-        }, 5000);
+        getData().then((data) => {
+            setPosts(data);
+        });
     }, []);
 
     const names = [
@@ -30,48 +26,24 @@ const Posts = () => {
     ];
 
     return (
-        <div>
-            {loading ? (
-                <Loader />
-            ) : (
-                <div className="post__container">
-                    {posts.slice(0, 20).map((post, i) => (
-                        <div key={i} className="post">
-                            <h1>{post.title}</h1>
-                            <p>{post.body}</p>
-                            <article className="post__info">
-                                <img src={avatar} alt="avatar image" />
-                                <p>
-                                    Writen by{" "}
-                                    {
-                                        names[
-                                            Math.floor(
-                                                Math.random() * names.length
-                                            )
-                                        ]
-                                    }{" "}
-                                </p>
-                                <LikeButton id={i} />
-                            </article>
-                        </div>
-                    ))}
-                </div>
-            )}
+        <div className="post__container">
+            {posts.slice(0, 20).map((post, i) => (
+                <article key={i} className="post">
+                    <Link to={"/post/" + post.id}>
+                        {post.title}
+                    </Link>
+                    <p>{post.body}</p>
+                    <article className="post__info">
+                        <img src={avatar} alt="avatar image" />
+                        <p>
+                            Writen by{" "}
+                            {names[Math.floor(Math.random() * names.length)]}{" "}
+                        </p>
+                        <LikeButton id={post.id} />
+                    </article>
+                </article>
+            ))}
         </div>
-    );
-};
-
-const LikeButton = ({ id }) => {
-    const [like, setLike] = useState(false);
-    return (
-        <button
-            className="btn"
-            onClick={() => {
-                setLike(!like);
-            }}
-        >
-            {like ? "❤" : "🤍"}
-        </button>
     );
 };
 
