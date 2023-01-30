@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;600&display=swap");
 :root {
     /* Variables */
-    --primary-color: #D7E9F7;
-    --main-font: 'Montserrat', sans-serif;
-    --logo-font: 'Dancing Script', cursive;
+    --primary-color: #d7e9f7;
+    --main-font: "Montserrat", sans-serif;
+    --logo-font: "Dancing Script", cursive;
 }
 
 html {
@@ -11,7 +11,7 @@ html {
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: var(--main-font);
-    background-color: #FFF9F9;
+    background-color: #fff9f9;
 }
 
 *,
@@ -77,10 +77,10 @@ a {
     font-size: 2rem;
     border: 1px solid #000;
     text-align: center;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
-.btn__login:hover{
+.btn__login:hover {
     background-color: var(--primary-color);
 }
 
@@ -164,7 +164,13 @@ a {
     display: grid;
     justify-content: center;
     align-content: flex-start;
-    padding: 4rem;
+    padding: 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+    .post__container {
+        height: 74rem;
+    }
 }
 
 .post__container a {
@@ -178,7 +184,6 @@ a {
     margin-bottom: 2rem;
     border-bottom: 1px solid #000;
 }
-
 
 .post p {
     font-size: 2rem;
@@ -285,6 +290,9 @@ a {
     display: none;
 }
 
+.profile__data__container {
+    padding: 2rem;
+}
 
 .profile__data {
     display: flex;
@@ -299,15 +307,15 @@ a {
 
 /* Login form */
 
-.login__container{
+.login__container {
     display: flex;
     flex-direction: column-reverse;
-    background-color: #F4EEFF;
+    background-color: #f4eeff;
     margin: 3rem auto;
 }
 
 @media (min-width: 768px) {
-    .login__container{
+    .login__container {
         flex-direction: row;
         justify-content: space-evenly;
         margin: auto;
