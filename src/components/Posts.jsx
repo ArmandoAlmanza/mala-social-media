@@ -34,7 +34,7 @@ const Posts = () => {
                     </Link>
                     <p>{post.body}</p>
                     <article className="post__info">
-                        <img src={avatar} alt="avatar image" />
+                        <img src={"https://api.dicebear.com/5.x/adventurer/svg?seed=" + names[Math.floor(Math.random() * names.length)]} alt="avatar image" />
                         <p>
                             Writen by{" "}
                             {names[Math.floor(Math.random() * names.length)]}{" "}
