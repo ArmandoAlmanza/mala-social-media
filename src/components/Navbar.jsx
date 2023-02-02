@@ -8,7 +8,7 @@ const Navbar = () => {
             name: "Profile",
         },
         {
-            to: "/",
+            to: "/friends",
             name: "Friends",
         },
         {

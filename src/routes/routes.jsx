@@ -3,6 +3,7 @@ import App from "../App";
 import Profile from "../pages/Profile";
 import Posts from "../components/Posts";
 import SinglePost from "../components/SimglePost";
+import Friends from "../pages/Friends";
 
 export const MyRoutes = () => {
     return (
@@ -12,6 +13,7 @@ export const MyRoutes = () => {
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/post/:postId" element={<SinglePost />} />
                 <Route path="/posts" element={<Posts />} />
+                <Route path="/friends" element={<Friends />} />
             </Routes>
         </BrowserRouter>
     );

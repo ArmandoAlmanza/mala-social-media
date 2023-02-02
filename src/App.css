@@ -405,3 +405,54 @@ a {
     outline: none;
     border-bottom: 1px solid #FD8A8A;
 }
+
+/* Frieds Page */
+
+.friends__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+}
+
+@media (min-width: 768px) {
+    .friends__container {
+        grid-template-columns: repeat(3, 1fr);    }
+}
+
+.friend {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid #000;
+    max-width: 95%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+
+@media (min-width: 768px) {
+    .friend:last-child{
+        margin-bottom: 0;
+    }
+}
+
+
+.friend img {
+    height: 15rem;
+}
+
+.friend__info__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.friend__info {
+    font-size: 1.2rem;
+}
+.friend__info span{
+    margin-right: .6rem;
+}
