@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const LoginForm = () => {
     return (
         <form className="login__form">
-			<h3>Login Forms</h3>
+			<h3 className="title">Login Forms</h3>
             <Field
                 name={"email"}
                 type={"text"}

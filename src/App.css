@@ -12,6 +12,7 @@ html {
     scroll-behavior: smooth;
     font-family: var(--main-font);
     background-color: #fff9f9;
+    min-height: 100vh;
 }
 
 *,
@@ -27,7 +28,7 @@ a {
 /* Utils */
 .title {
     font-size: 2.5rem;
-    margin: 2rem 0;
+    margin: 2rem 0 1rem 0;
     text-align: center;
 }
 
@@ -77,11 +78,28 @@ a {
     font-size: 2rem;
     border: 1px solid #000;
     text-align: center;
+    display: inline-block;
+    width: 95%;
+    margin: 0 auto;
     transition: all 0.3s ease-in-out;
 }
 
 .btn__login:hover {
     background-color: var(--primary-color);
+}
+
+.btn__opt {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #A0C3D2;
+    border: none;
+    background: transparent;
+    transition: all .3s ease-in-out;
+}
+
+.btn__opt:hover {
+    cursor: pointer;
+    color: #FD8A8A;
 }
 
 /* Header */
@@ -324,8 +342,10 @@ a {
     display: flex;
     flex-direction: column-reverse;
     background-color: #f4eeff;
-    margin: 3rem auto;
+    gap: 2rem;
+    padding: 4rem;
 }
+
 
 @media (min-width: 768px) {
     .login__container {
@@ -348,6 +368,14 @@ a {
     }
 }
 
+.btns__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #000;
+    padding: 1rem 0;
+}
+
 .login__form {
     display: flex;
     flex-direction: column;
@@ -358,11 +386,22 @@ a {
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    gap: 1rem;
 }
 
 .field label {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
 }
 .field input {
     width: 95%;
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    transition: all .3s ease-in-out;
+}
+
+.field input:focus {
+    outline: none;
+    border-bottom: 1px solid #FD8A8A;
 }

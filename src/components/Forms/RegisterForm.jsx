@@ -4,16 +4,21 @@ import { Link } from "react-router-dom";
 
 const RegisterForm = () => {
     return (
-        <form className="login__form">
-			<h3>Register Form
-
-			</h3>
+        <form className="register__form">
+            <h3 className="title">Register Form</h3>
+            <Field
+                name={"name"}
+                type={"text"}
+                message={"Username"}
+                placeholder={"Enter your username"}
+            />
             <Field
                 name={"email"}
                 type={"text"}
-                message={"Email or Username"}
-                placeholder={"Enter your username or email"}
+                message={"Email"}
+                placeholder={"Enter your email"}
             />
+
             <Field
                 name={"password"}
                 type={"password"}

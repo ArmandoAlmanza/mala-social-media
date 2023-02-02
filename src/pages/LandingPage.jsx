@@ -17,8 +17,18 @@ const LandingPage = () => {
             </div>
             <div>
                 <div className="btns__form">
-                    <button onClick={() => setForm(true)}>Login</button>
-                    <button onClick={() => setForm(false)}>Register</button>
+                    <button
+                        className="btn__opt"
+                        onClick={() => setForm(true)}
+                    >
+                        Login
+                    </button>
+                    <button
+                        className="btn__opt"
+                        onClick={() => setForm(false)}
+                    >
+                        Register
+                    </button>
                 </div>
 
                 {form ? <LoginForm /> : <RegisterForm />}
