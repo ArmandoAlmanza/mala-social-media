@@ -5,7 +5,7 @@ import Friend from "../components/Friend";
 
 const Friends = () => {
     useEffect(() => {
-        document.title = "MALA || Profile";
+        document.title = "MALA || Friends";
     }, []);
 
     return (
