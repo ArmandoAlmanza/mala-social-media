@@ -167,7 +167,10 @@ a {
     align-content: flex-start;
     padding: 1rem 3rem;
 }
-
+.post__container small{
+    display: block;
+    font-size: 1.2rem;
+}
 .single__post {
     height: 42.5vh;
     padding: 4rem;

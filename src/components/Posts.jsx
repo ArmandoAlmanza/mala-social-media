@@ -29,9 +29,8 @@ const Posts = () => {
         <div className="post__container">
             {posts.slice(0, 20).map((post, i) => (
                 <article key={i} className="post">
-                    <Link to={"/post/" + post.id}>
-                        {post.title}
-                    </Link>
+                    <Link to={"/post/" + post.id}>{post.title}</Link>
+                    <small>Creation Date 01/02/2023</small>
                     <p>{post.body}</p>
                     <article className="post__info">
                         <img src={avatar} alt="avatar image" />
