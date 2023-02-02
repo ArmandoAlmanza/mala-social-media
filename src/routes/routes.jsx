@@ -4,6 +4,7 @@ import Profile from "../pages/Profile";
 import Posts from "../components/Posts";
 import SinglePost from "../components/SimglePost";
 import Friends from "../pages/Friends";
+import Trending from "../pages/Trending";
 
 export const MyRoutes = () => {
     return (
@@ -14,6 +15,7 @@ export const MyRoutes = () => {
                 <Route path="/post/:postId" element={<SinglePost />} />
                 <Route path="/posts" element={<Posts />} />
                 <Route path="/friends" element={<Friends />} />
+                <Route path="/trending" element={<Trending />} />
             </Routes>
         </BrowserRouter>
     );

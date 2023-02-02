@@ -12,7 +12,7 @@ const Navbar = () => {
             name: "Friends",
         },
         {
-            to: "/",
+            to: "/trending",
             name: "Trending",
         },
     ];
