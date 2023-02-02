@@ -32,6 +32,8 @@ public class PostController {
 		Post post = new Post();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDateTime now = LocalDateTime.now();
+
+		/* TODO create relations and add the user that create the post */
 		post.setTitle(req.title());
 		post.setBody(req.body());
 		post.setUser(req.user());

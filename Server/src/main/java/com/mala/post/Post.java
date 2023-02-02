@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "post")
 public class Post {
+	/* TODO create the relations */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
