@@ -30,8 +30,8 @@ public class UserController {
 	@PostMapping
 	public User newUser(@RequestBody newUserRequest req) {
 		User user = new User();
-		if (req.name() == null || req.name() == "") {
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Need to add a user name");
+		if (req.email() == null || req.email() == "") {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Need to add a user email");
 		}
 
 		if (req.imagePath() == null || req.imagePath() == "") {
