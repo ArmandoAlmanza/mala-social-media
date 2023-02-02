@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-@AllArgsConstructor
 @RestController
+@AllArgsConstructor
 @RequestMapping("/api/post")
 public class PostController {
 	private final PostRepository postRepository;
@@ -28,7 +28,7 @@ public class PostController {
 	}
 
 	@PostMapping()
-	public Post addPost(@RequestBody newPostRequest req) {
+	public Post newPost(@RequestBody newPostRequest req) {
 		Post post = new Post();
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDateTime now = LocalDateTime.now();
@@ -37,9 +37,9 @@ public class PostController {
 		post.setTitle(req.title());
 		post.setBody(req.body());
 		post.setUser(req.user());
-		post.setLike(req.like());
+		post.setLike(String.valueOf(req.like()));
 		post.setCreationDate(dtf.format(now));
-
+		postRepository.save(post);
 		return post;
 	}
 
