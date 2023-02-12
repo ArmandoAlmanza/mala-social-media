@@ -5,12 +5,7 @@ import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import LikeButton from "./LikeButton";
-
-const getData = async (id) => {
-    return await fetch("https://jsonplaceholder.typicode.com/posts/" + id).then(
-        (res) => res.json()
-    );
-};
+import { getPost } from "../api/axiosReponse";
 
 const SimglePost = () => {
     const { postId } = useParams();
@@ -20,8 +15,8 @@ const SimglePost = () => {
     useEffect(() => {
         setLoading(true);
         setTimeout(() => {
-            getData(postId).then((data) => {
-                setPosts(data);
+            getPost(postId).then((data) => {
+                setPosts(data.data);
                 setLoading(false);
             });
         }, 2000);
@@ -44,10 +39,20 @@ const SimglePost = () => {
                     <Header />
                     <div className="post__container  single__post">
                         <div className="post">
-                            <h1>{post.title}</h1>
+                            <h1>Titulo generico</h1>
                             <p>{post.body}</p>
                             <article className="post__info">
-                            <img src={"https://api.dicebear.com/5.x/adventurer/svg?seed=" + names[Math.floor(Math.random() * names.length)]} alt="avatar image" />
+                                <img
+                                    src={
+                                        "https://api.dicebear.com/5.x/adventurer/svg?seed=" +
+                                        names[
+                                            Math.floor(
+                                                Math.random() * names.length
+                                            )
+                                        ]
+                                    }
+                                    alt="avatar image"
+                                />
                                 <p>
                                     Writen by{" "}
                                     {

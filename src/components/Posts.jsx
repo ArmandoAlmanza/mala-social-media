@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
-import avatar from "../assets/avatar.svg";
 import { Link } from "react-router-dom";
 import LikeButton from "./LikeButton";
-
-const getData = async () => {
-    return await fetch("https://jsonplaceholder.typicode.com/posts/").then(
-        (res) => res.json()
-    );
-};
+import { getPosts } from "../api/axiosReponse";
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        getData().then((data) => {
-            setPosts(data);
+        getPosts().then((data) => {
+            setPosts(data.data);
         });
     }, []);
 
@@ -29,11 +23,17 @@ const Posts = () => {
         <div className="post__container">
             {posts.slice(0, 20).map((post, i) => (
                 <article key={i} className="post">
-                    <Link to={"/post/" + post.id}>{post.title}</Link>
+                    <Link to={"/post/" + post.id}>Titulo generico</Link>
                     <small>Creation Date 01/02/2023</small>
                     <p>{post.body}</p>
                     <article className="post__info">
-                        <img src={"https://api.dicebear.com/5.x/adventurer/svg?seed=" + names[Math.floor(Math.random() * names.length)]} alt="avatar image" />
+                        <img
+                            src={
+                                "https://api.dicebear.com/5.x/adventurer/svg?seed=" +
+                                names[Math.floor(Math.random() * names.length)]
+                            }
+                            alt="avatar image"
+                        />
                         <p>
                             Writen by{" "}
                             {names[Math.floor(Math.random() * names.length)]}{" "}
