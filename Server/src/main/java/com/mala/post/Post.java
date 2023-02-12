@@ -17,13 +17,11 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "post")
 public class Post {
-	/* TODO create the relations */
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	private String title;
 	private String body;
 	private String user;
-	private String like;
+	private Integer likes;
 	private String creationDate;
 }
