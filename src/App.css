@@ -91,17 +91,30 @@ a {
 .btn__opt {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #A0C3D2;
+    color: #a0c3d2;
     border: none;
     background: transparent;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn__opt:hover {
     cursor: pointer;
-    color: #FD8A8A;
+    color: #fd8a8a;
 }
 
+.btn__add {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a0c3d2;
+    border: 1px solid #202020;
+    border-radius: 15px;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease-in-out;
+}
+.btn__add:hover {
+    cursor: pointer;
+    color: #fd8a8a;
+}
 /* Header */
 .site__header {
     display: flex;
@@ -185,7 +198,7 @@ a {
     align-content: flex-start;
     padding: 1rem 3rem;
 }
-.post__container small{
+.post__container small {
     display: block;
     font-size: 1.2rem;
 }
@@ -346,7 +359,6 @@ a {
     padding: 4rem;
 }
 
-
 @media (min-width: 768px) {
     .login__container {
         flex-direction: row;
@@ -398,12 +410,12 @@ a {
     background: transparent;
     border: none;
     border-bottom: 1px solid #000;
-    transition: all .3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .field input:focus {
     outline: none;
-    border-bottom: 1px solid #FD8A8A;
+    border-bottom: 1px solid #fd8a8a;
 }
 
 /* Frieds Page */
@@ -418,7 +430,8 @@ a {
 
 @media (min-width: 768px) {
     .friends__container {
-        grid-template-columns: repeat(3, 1fr);    }
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .friend {
@@ -431,13 +444,11 @@ a {
     border-radius: 15px;
 }
 
-
 @media (min-width: 768px) {
-    .friend:last-child{
+    .friend:last-child {
         margin-bottom: 0;
     }
 }
-
 
 .friend img {
     height: 15rem;
@@ -453,6 +464,31 @@ a {
 .friend__info {
     font-size: 1.2rem;
 }
-.friend__info span{
-    margin-right: .6rem;
+.friend__info span {
+    margin-right: 0.6rem;
+}
+
+.newpost__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea {
+    width: 90%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #202020;
+    border-radius: 15px;
+    font-size: 16px;
+    resize: none;
+}
+
+@media (min-width: 768px) {
+    .textarea {
+        width: 50rem;
+    }
 }
