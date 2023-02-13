@@ -52,16 +52,7 @@ const SimglePost = () => {
                                     }
                                     alt="avatar image"
                                 />
-                                <p>
-                                    Writen by{" "}
-                                    {
-                                        names[
-                                            Math.floor(
-                                                Math.random() * names.length
-                                            )
-                                        ]
-                                    }{" "}
-                                </p>
+                                <p>Writen by {post.user} </p>
                                 <LikeButton id={post.id} />
                             </article>
                         </div>

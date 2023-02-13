@@ -12,17 +12,13 @@ const PostForm = () => {
 
     const [post, setPost] = useState({
         body: "Just a sample description",
-        user: "Armando Almanza",
+        user: names[Math.floor(Math.random() * names.length)],
     });
 
     const handleChange = (e) => {
         setPost({ ...post, [e.target.name]: e.target.value });
     };
-    const handleSubmit = (e) => {
-        setPost({
-            ...post,
-            user: names[Math.floor(Math.random() * names.length)],
-        });
+    const handleSubmit = () => {
         try {
             newPost(post);
         } catch (error) {

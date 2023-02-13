@@ -36,7 +36,7 @@ const Posts = () => {
                         />
                         <p>
                             Writen by{" "}
-                            {names[Math.floor(Math.random() * names.length)]}{" "}
+                            {post.user}
                         </p>
                         <LikeButton id={post.id} />
                     </article>
