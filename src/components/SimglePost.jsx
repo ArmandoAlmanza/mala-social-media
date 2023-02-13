@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Loader from "./Loader";
-import avatar from "../assets/avatar.svg";
 import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
