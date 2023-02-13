@@ -23,5 +23,6 @@ public class Post {
 	private String body;
 	private String user;
 	private Integer likes;
+	private Boolean liked;
 	private String creationDate;
 }

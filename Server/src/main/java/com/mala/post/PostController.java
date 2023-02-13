@@ -47,6 +47,7 @@ public class PostController {
 		post.setBody(req.body());
 		post.setUser(req.user());
 		post.setLikes(0);
+		post.setLiked(false);
 		post.setCreationDate(dtf.format(now));
 		postRepository.save(post);
 		return post;
@@ -56,15 +57,14 @@ public class PostController {
 	public String updateLike(@PathVariable("postId") Integer id) {
 		Post post = postRepository.findById(id).get();
 
-		var likes = post.getLikes();
-		post.setLikes(likes + 1);
-
 		post.setBody(post.getBody());
 		post.setUser(post.getUser());
+		post.setLikes(post.getLikes());
+		post.setLiked(!post.getLiked());
 		post.setCreationDate(post.getCreationDate());
 
 		postRepository.save(post);
-		return "The like counter is: " + likes;
+		return post.getLiked() ? "You like this post" : "You dont like this post yet";
 	}
 
 }
